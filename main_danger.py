@@ -29,6 +29,7 @@ COUNTRY_CODES = {
     "costa rica": "cr", "panama": "pa", "cuba": "cu",
     "dominican republic": "do", "guatemala": "gt", "honduras": "hn",
     "el salvador": "sv", "nicaragua": "ni", "puerto rico": "pr",
+    "guyana": "gy", "suriname": "sr", "french guiana": "gf",
 }
 
 

@@ -96,6 +96,126 @@ DANGER_PLANTS = {
         "Cerbera manghas",        # 9 – glucósidos cardíacos letales
         "Strychnos nux-vomica",   # 10 – noz-vômica, estricnina, extremadamente tóxica
     ],
+    "argentina": [
+        "Euphorbia selloi",       # 1 – irritante cutáneo leve, nativa del Cono Sur
+        "Solanum sisymbriifolium",# 2 – revienta caballos, nativa argentina
+        "Nicotiana longiflora",   # 3 – tabaquillo, endémica argentina
+        "Cestrum parqui",         # 4 – palqui, hepatotóxica
+        "Datura ferox",           # 5 – chamico, anticolinérgico nativo
+        "Senecio grisebachii",    # 6 – yerba de la oveja, pirrolizidinas
+        "Solanum glaucophyllum",  # 7 – duraznillo blanco, hipervitaminosis D
+        "Baccharis coridifolia",  # 8 – mío-mío, poliacetilenos muy tóxicos
+        "Brugmansia sanguinea",   # 9 – floripón rojo andino, muy tóxico
+        "Veratrum album",         # 10 – cebadilla, alcaloides de veratrum letales
+    ],
+    "bolivia": [
+        "Acnistus arborescens",   # 1 – borrachero de monte, bayas tóxicas
+        "Solanum americanum",     # 2 – hierba mora
+        "Nicotiana rustica",      # 3 – mapacho, tabaco nativo muy potente
+        "Cestrum auriculatum",    # 4 – hierba santa, hepatotóxica
+        "Datura ferox",           # 5 – chamico, anticolinérgico
+        "Thevetia peruviana",     # 6 – cabalonga, glucósidos cardíacos
+        "Brunfelsia grandiflora", # 7 – manacá, muy tóxica post-alucinógeno
+        "Brugmansia arborea",     # 8 – floripondio, anticolinérgico potente
+        "Strychnos toxifera",     # 9 – curare amazónico
+        "Aconitum columbianum",   # 10 – acónito andino, aconitina, mortal en mg
+    ],
+    "chile": [
+        "Drimys winteri",         # 1 – canelo, irritante moderado
+        "Solanum nigrum",         # 2 – hierba mora
+        "Cestrum parqui",         # 3 – palqui, nativa de Chile, hepatotóxica
+        "Nicotiana rustica",      # 4 – tabaco silvestre
+        "Datura stramonium",      # 5 – chamico
+        "Senecio erraticus",      # 6 – raguay, pirrolizidinas
+        "Conium maculatum",       # 7 – cicuta, neurotóxica
+        "Veratrum album",         # 8 – cebadilla, alcaloides letales
+        "Brugmansia sanguinea",   # 9 – floripón, anticolinérgico
+        "Lobelia tupa",           # 10 – tupa, endémica chilena, lobelina muy tóxica
+    ],
+    "ecuador": [
+        "Euphorbia cotinifolia",  # 1 – sangre de Cristo, irritante
+        "Lantana camara",         # 2 – lantana, bayas tóxicas
+        "Solanum quitoense",      # 3 – naranjilla, tallos y hojas tóxicos
+        "Dieffenbachia seguine",  # 4 – lotería, oxalatos
+        "Thevetia peruviana",     # 5 – cabalonga, glucósidos cardíacos
+        "Brunfelsia grandiflora", # 6 – manacá, tóxica en todas sus partes
+        "Datura stramonium",      # 7 – chamico
+        "Psychotria viridis",     # 8 – chacruna, DMT, componente del ayahuasca
+        "Brugmansia arborea",     # 9 – borrachero, anticolinérgico potente
+        "Brugmansia candida",     # 10 – guanto, el borrachero más potente del Ecuador
+    ],
+    "peru": [
+        "Euphorbia cotinifolia",  # 1 – sangre de toro
+        "Solanum americanum",     # 2 – hierba mora
+        "Nicotiana rustica",      # 3 – mapacho, tabaco ritual muy potente
+        "Carapichea ipecacuanha", # 4 – ipecacuana, emetina tóxica en altas dosis
+        "Thevetia peruviana",     # 5 – cabalonga
+        "Brunfelsia grandiflora", # 6 – manacá
+        "Psychotria viridis",     # 7 – chacruna, ayahuasca
+        "Datura stramonium",      # 8 – chamico
+        "Brugmansia arborea",     # 9 – toé, usado en rituales, muy peligroso
+        "Clibadium sylvestre",    # 10 – barbasco amazónico, ictiotóxico, letal
+    ],
+    "venezuela": [
+        "Euphorbia cotinifolia",  # 1 – lechero rojo, irritante
+        "Lantana camara",         # 2 – venturosa, bayas tóxicas
+        "Solanum torvum",         # 3 – berenjena cimarrona
+        "Dieffenbachia seguine",  # 4 – lotería, oxalatos
+        "Thevetia peruviana",     # 5 – cobalonga, glucósidos cardíacos
+        "Brunfelsia uniflora",    # 6 – manacá venezolano
+        "Gliricidia sepium",      # 7 – mata ratón, rodenticida natural
+        "Brugmansia suaveolens",  # 8 – borrachero, anticolinérgico
+        "Cerbera manghas",        # 9 – glucósidos cardíacos letales
+        "Strychnos nux-vomica",   # 10 – nuez vómica, estricnina
+    ],
+    "paraguay": [
+        "Euphorbia heterophylla", # 1 – lecherita del campo
+        "Solanum sisymbriifolium",# 2 – tomatillo del campo
+        "Nicotiana tabacum",      # 3 – tabaco, cultivado históricamente en Paraguay
+        "Jatropha curcas",        # 4 – piñón, semillas altamente tóxicas
+        "Datura ferox",           # 5 – chamico
+        "Wedelia glauca",         # 6 – yuyo sonso, tóxica para ganado y humanos
+        "Cestrum parqui",         # 7 – duraznillo negro, hepatotóxico
+        "Baccharis coridifolia",  # 8 – mío-mío, poliacetilenos muy tóxicos
+        "Ricinus communis",       # 9 – tártago, ricina
+        "Solanum glaucophyllum",  # 10 – duraznillo blanco, calcinosis enzoótica
+    ],
+    "uruguay": [
+        "Euphorbia peplus",       # 1 – pichoga, irritante leve
+        "Solanum sisymbriifolium",# 2 – revienta caballos
+        "Nicotiana tabacum",      # 3 – tabaco
+        "Wedelia glauca",         # 4 – yuyo sonso, hepatotóxica
+        "Cestrum parqui",         # 5 – palqui, hepatotóxica
+        "Datura ferox",           # 6 – chamico, anticolinérgico
+        "Senecio madagascariensis",# 7 – flor de setiembre, pirrolizidinas
+        "Baccharis coridifolia",  # 8 – mío-mío
+        "Conium maculatum",       # 9 – cicuta, parálisis
+        "Solanum glaucophyllum",  # 10 – duraznillo blanco, hipervitaminosis D letal
+    ],
+    "guyana": [
+        "Lantana camara",         # 1 – lantana
+        "Jatropha gossypifolia",  # 2 – bellyache bush, semillas tóxicas
+        "Mucuna pruriens",        # 3 – pica-pica, picazón severa + L-DOPA
+        "Dieffenbachia seguine",  # 4 – dumb cane
+        "Abrus precatorius",      # 5 – ojo de buey, abrina tan letal como ricina
+        "Thevetia peruviana",     # 6 – glucósidos cardíacos
+        "Gliricidia sepium",      # 7 – mata ratón, tóxica para mamíferos
+        "Caladium bicolor",       # 8 – corazón de Jesús, oxalatos
+        "Cerbera manghas",        # 9 – glucósidos cardíacos letales
+        "Strychnos toxifera",     # 10 – curare, usado en flechas envenenadas
+    ],
+    "suriname": [
+        "Euphorbia heterophylla", # 1 – irritante
+        "Jatropha gossypifolia",  # 2 – bottelboom, semillas muy tóxicas
+        "Mucuna pruriens",        # 3 – pica-pica, picazón intensa
+        "Lantana camara",         # 4 – bayas tóxicas
+        "Dieffenbachia seguine",  # 5 – oxalatos
+        "Abrus precatorius",      # 6 – wegaap, abrina extremadamente tóxica
+        "Thevetia peruviana",     # 7 – glucósidos cardíacos
+        "Caladium bicolor",       # 8 – cristales de oxalato
+        "Strychnos toxifera",     # 9 – woorali, curare
+        "Physostigma venenosum",  # 10 – haba del Calabar, fisostigmina letal
+    ],
 }
 
 # Plantas de ejemplo por país
