@@ -11,47 +11,57 @@ import argparse
 import sys
 from pathlib import Path
 
+import requests
+
 from config import IMAGES_DIR, OUTPUT_DIR, DANGER_PLANTS, MEMES_DIR, MUSIC_PATH, BG_DIR
 from src.danger_ranker import rank_dangerous_plants, get_display_name
 from src.searcher import get_plant_images
 from src.danger_video import create_danger_video
 
+# ISO 3166-1 alpha-2 codes for flagcdn.com
+COUNTRY_CODES = {
+    "mexico": "mx", "colombia": "co", "australia": "au",
+    "argentina": "ar", "brazil": "br", "canada": "ca",
+    "usa": "us", "spain": "es", "france": "fr", "germany": "de",
+    "japan": "jp", "china": "cn", "india": "in", "peru": "pe",
+    "chile": "cl", "venezuela": "ve", "ecuador": "ec",
+    "bolivia": "bo", "paraguay": "py", "uruguay": "uy",
+    "costa rica": "cr", "panama": "pa", "cuba": "cu",
+    "dominican republic": "do", "guatemala": "gt", "honduras": "hn",
+    "el salvador": "sv", "nicaragua": "ni", "puerto rico": "pr",
+}
 
-def get_country_bg(country: str) -> Path | None:
+
+def get_country_flag(country: str) -> Path | None:
     BG_DIR.mkdir(parents=True, exist_ok=True)
     slug = country.lower().replace(" ", "_")
-    for ext in (".jpg", ".jpeg", ".png", ".webp"):
-        cached = BG_DIR / f"{slug}{ext}"
-        if cached.exists():
-            return cached
+    cached = BG_DIR / f"flag_{slug}.jpg"
+    if cached.exists():
+        return cached
 
+    code = COUNTRY_CODES.get(country.lower())
+    if not code:
+        # Try pycountry as fallback
+        try:
+            import pycountry
+            match = pycountry.countries.search_fuzzy(country)
+            if match:
+                code = match[0].alpha_2.lower()
+        except Exception:
+            pass
+
+    if not code:
+        print(f"  [aviso] Código de país no encontrado para '{country}'")
+        return None
+
+    url = f"https://flagcdn.com/w1280/{code}.jpg"
     try:
-        import requests
-        from urllib.parse import urlparse
-        from ddgs import DDGS
-
-        query = f"{country} naturaleza paisaje fotografía"
-        with DDGS() as ddgs:
-            results = list(ddgs.images(query, max_results=8))
-
-        for r in results:
-            url = r.get("image", "")
-            if not url:
-                continue
-            try:
-                resp = requests.get(url, timeout=10,
-                                    headers={"User-Agent": "Mozilla/5.0"})
-                ct = resp.headers.get("content-type", "")
-                if resp.status_code == 200 and "image" in ct:
-                    suffix = Path(urlparse(url).path).suffix.lower() or ".jpg"
-                    dest = BG_DIR / f"{slug}{suffix}"
-                    dest.write_bytes(resp.content)
-                    if dest.stat().st_size > 15_000:
-                        return dest
-            except Exception:
-                continue
+        resp = requests.get(url, timeout=10, headers={"User-Agent": "Mozilla/5.0"})
+        if resp.status_code == 200:
+            cached.write_bytes(resp.content)
+            return cached
     except Exception as e:
-        print(f"  [aviso] Sin fondo para {country}: {e}")
+        print(f"  [aviso] No se pudo descargar bandera: {e}")
     return None
 
 
@@ -104,10 +114,10 @@ def main():
         status = "✓" if imgs else "✗ sin imagen"
         print(f"    {status} {plant}")
 
-    # 4. Fondo del país
-    print("\n[4/4] Fondo del país...")
-    bg_img = get_country_bg(country)
-    print(f"    {'✓ ' + bg_img.name if bg_img else '✗ usando fondo blanco'}")
+    # 4. Bandera del país
+    print("\n[4/4] Descargando bandera...")
+    bg_img = get_country_flag(country)
+    print(f"    {'✓ ' + bg_img.name if bg_img else '✗ sin bandera (fondo oscuro)'}")
 
     # Mr. Increíble: 1.jpg → 10.jpg
     mr_imgs = sorted(MEMES_DIR.glob("*.jpg"), key=lambda p: int(p.stem))
