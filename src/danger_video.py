@@ -1,6 +1,6 @@
 from pathlib import Path
 
-from moviepy import AudioFileClip, ImageClip, concatenate_videoclips
+from moviepy import AudioFileClip, ImageClip, concatenate_audioclips, concatenate_videoclips
 
 from config import DANGER_TIMESTAMPS, FPS
 from src.danger_graphics import render_danger_card, render_intro_card
@@ -39,7 +39,11 @@ def create_danger_video(
         clips.append(ImageClip(frame, duration=durations[i]))
 
     video = concatenate_videoclips(clips)
-    video = video.with_audio(audio.subclipped(0, min(video.duration, music_dur)))
+
+    # Intro plays in silence; music starts after INTRO_DURATION seconds
+    silence = audio.subclipped(0, INTRO_DURATION).with_volume_scaled(0)
+    music   = audio.subclipped(0, min(video.duration - INTRO_DURATION, music_dur))
+    video   = video.with_audio(concatenate_audioclips([silence, music]))
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
     video.write_videofile(
