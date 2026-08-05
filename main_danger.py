@@ -32,6 +32,69 @@ COUNTRY_CODES = {
     "guyana": "gy", "suriname": "sr", "french guiana": "gf",
 }
 
+# Maps each country to its continent output subfolder
+COUNTRY_CONTINENT = {
+    # North America
+    "canada": "north_america", "usa": "north_america", "mexico": "north_america",
+    "greenland": "north_america",
+    # Central America
+    "guatemala": "central_america", "belize": "central_america",
+    "honduras": "central_america", "el salvador": "central_america",
+    "nicaragua": "central_america", "costa rica": "central_america",
+    "panama": "central_america",
+    # Caribbean
+    "cuba": "central_america", "haiti": "central_america",
+    "dominican republic": "central_america", "puerto rico": "central_america",
+    "jamaica": "central_america", "trinidad and tobago": "central_america",
+    # South America
+    "colombia": "south_america", "venezuela": "south_america",
+    "guyana": "south_america", "suriname": "south_america",
+    "french guiana": "south_america", "brazil": "south_america",
+    "ecuador": "south_america", "peru": "south_america",
+    "bolivia": "south_america", "paraguay": "south_america",
+    "chile": "south_america", "argentina": "south_america",
+    "uruguay": "south_america",
+    # Europe
+    "spain": "europe", "france": "europe", "germany": "europe",
+    "italy": "europe", "portugal": "europe", "united kingdom": "europe",
+    "russia": "europe", "ukraine": "europe", "poland": "europe",
+    "netherlands": "europe", "belgium": "europe", "sweden": "europe",
+    "norway": "europe", "finland": "europe", "denmark": "europe",
+    "switzerland": "europe", "austria": "europe", "greece": "europe",
+    "romania": "europe", "hungary": "europe", "czech republic": "europe",
+    "slovakia": "europe", "croatia": "europe", "serbia": "europe",
+    "bulgaria": "europe", "albania": "europe",
+    # Middle East
+    "turkey": "middle_east", "iran": "middle_east", "iraq": "middle_east",
+    "saudi arabia": "middle_east", "yemen": "middle_east", "oman": "middle_east",
+    "uae": "middle_east", "qatar": "middle_east", "kuwait": "middle_east",
+    "jordan": "middle_east", "lebanon": "middle_east", "syria": "middle_east",
+    "israel": "middle_east",
+    # Africa
+    "nigeria": "africa", "ethiopia": "africa", "egypt": "africa",
+    "south africa": "africa", "kenya": "africa", "tanzania": "africa",
+    "ghana": "africa", "cameroon": "africa", "mozambique": "africa",
+    "madagascar": "africa", "angola": "africa", "zambia": "africa",
+    "zimbabwe": "africa", "senegal": "africa", "mali": "africa",
+    "niger": "africa", "chad": "africa", "sudan": "africa",
+    "somalia": "africa", "drc": "africa", "congo": "africa",
+    "ivory coast": "africa", "morocco": "africa", "algeria": "africa",
+    "tunisia": "africa", "libya": "africa",
+    # Asia
+    "china": "asia", "india": "asia", "japan": "asia", "south korea": "asia",
+    "north korea": "asia", "vietnam": "asia", "thailand": "asia",
+    "indonesia": "asia", "philippines": "asia", "malaysia": "asia",
+    "myanmar": "asia", "cambodia": "asia", "laos": "asia",
+    "bangladesh": "asia", "pakistan": "asia", "afghanistan": "asia",
+    "nepal": "asia", "sri lanka": "asia", "singapore": "asia",
+    "mongolia": "asia", "kazakhstan": "asia", "uzbekistan": "asia",
+    "taiwan": "asia",
+    # Oceania
+    "australia": "oceania", "new zealand": "oceania",
+    "papua new guinea": "oceania", "fiji": "oceania",
+    "solomon islands": "oceania", "vanuatu": "oceania",
+}
+
 
 def get_country_flag(country: str) -> Path | None:
     BG_DIR.mkdir(parents=True, exist_ok=True)
@@ -73,9 +136,10 @@ def main():
     args = parser.parse_args()
 
     country = args.pais.strip()
+    continent = COUNTRY_CONTINENT.get(country.lower(), "other")
     output = (
         Path(args.salida) if args.salida
-        else OUTPUT_DIR / f"{country.lower().replace(' ', '_')}_danger.mp4"
+        else OUTPUT_DIR / continent / f"{country.lower().replace(' ', '_')}_danger.mp4"
     )
 
     print(f"\n{'='*54}")
