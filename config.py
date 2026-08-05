@@ -38,6 +38,53 @@ FPS = 24
 FONT        = "/usr/share/fonts/inter/InterVariable.ttf"
 FONT_BOLD   = "/usr/share/fonts/inter/InterVariable.ttf"
 
+MEMES_DIR   = BASE_DIR / "memes" / "mr increible"
+MUSIC_PATH  = BASE_DIR / "music" / "mr-incredible-becomes-uncanny-all-songs-music.mp3"
+BG_DIR      = IMAGES_DIR / "backgrounds"
+
+# Tiempos (segundos) en que la música cambia de fase — un timestamp por planta
+DANGER_TIMESTAMPS = [0, 3, 6, 11, 14, 19, 21, 24, 32, 43]
+
+# Plantas peligrosas por país, ordenadas de MENOS a MÁS peligrosa (1→10)
+DANGER_PLANTS = {
+    "mexico": [
+        "Euphorbia milii",        # 1 – irritante cutáneo leve
+        "Solanum americanum",     # 2 – tóxico si se ingiere en cantidad
+        "Dieffenbachia seguine",  # 3 – cristales de oxalato, irrita boca/garganta
+        "Nerium oleander",        # 4 – glucósidos cardíacos
+        "Datura stramonium",      # 5 – anticolinérgico potente, alucinógeno
+        "Brugmansia suaveolens",  # 6 – muy tóxico, anticolinérgico fuerte
+        "Taxus globosa",          # 7 – taxina, altamente tóxico
+        "Ricinus communis",       # 8 – ricina, mortal en dosis bajas
+        "Conium maculatum",       # 9 – cicuta, neurotóxica, parálisis
+        "Hippomane mancinella",   # 10 – el árbol más peligroso del mundo
+    ],
+    "colombia": [
+        "Euphorbia tirucalli",    # 1
+        "Jatropha curcas",        # 2
+        "Solanum nigrum",         # 3
+        "Nerium oleander",        # 4
+        "Datura stramonium",      # 5
+        "Brugmansia arborea",     # 6
+        "Thevetia peruviana",     # 7
+        "Ricinus communis",       # 8
+        "Conium maculatum",       # 9
+        "Hippomane mancinella",   # 10
+    ],
+    "australia": [
+        "Euphorbia peplus",       # 1
+        "Solanum laciniatum",     # 2
+        "Lantana camara",         # 3
+        "Nerium oleander",        # 4
+        "Atropa belladonna",      # 5
+        "Abrus precatorius",      # 6
+        "Ricinus communis",       # 7
+        "Conium maculatum",       # 8
+        "Dendrocnide moroides",   # 9 – gympie-gympie, dolor extremo por meses
+        "Cerbera manghas",        # 10
+    ],
+}
+
 # Plantas de ejemplo por país
 COUNTRY_PLANTS = {
     "mexico": [

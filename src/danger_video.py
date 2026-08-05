@@ -1,0 +1,49 @@
+from pathlib import Path
+
+from moviepy import AudioFileClip, ImageClip, concatenate_videoclips
+
+from config import DANGER_TIMESTAMPS, FPS
+from src.danger_graphics import render_danger_card
+
+
+def create_danger_video(
+    plants: list[dict],
+    country: str,
+    output_path: Path,
+    music_path: Path,
+    bg_img_path: Path | None = None,
+) -> Path:
+    """
+    plants: list of 10 dicts (ordered least → most dangerous):
+        { 'name': str, 'plant_img': Path|None, 'mr_img': Path|None }
+    """
+    audio = AudioFileClip(str(music_path))
+    music_dur = audio.duration
+
+    timestamps = DANGER_TIMESTAMPS + [music_dur]
+    durations = [timestamps[i + 1] - timestamps[i] for i in range(10)]
+
+    clips = []
+    for i, plant in enumerate(plants):
+        frame = render_danger_card(
+            plant_name=plant["name"],
+            plant_img_path=plant.get("plant_img"),
+            mr_img_path=plant.get("mr_img"),
+            bg_img_path=bg_img_path,
+        )
+        clips.append(ImageClip(frame, duration=durations[i]))
+
+    video = concatenate_videoclips(clips)
+    video = video.with_audio(audio.subclipped(0, min(video.duration, music_dur)))
+
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    video.write_videofile(
+        str(output_path),
+        fps=FPS,
+        codec="libx264",
+        audio_codec="aac",
+        logger="bar",
+    )
+    video.close()
+    audio.close()
+    return output_path
