@@ -30,6 +30,8 @@ COUNTRY_CODES = {
     "dominican republic": "do", "guatemala": "gt", "honduras": "hn",
     "el salvador": "sv", "nicaragua": "ni", "puerto rico": "pr",
     "guyana": "gy", "suriname": "sr", "french guiana": "gf",
+    "new zealand": "nz", "papua new guinea": "pg", "fiji": "fj",
+    "solomon islands": "sb", "vanuatu": "vu",
 }
 
 # Maps each country to its continent output subfolder

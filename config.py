@@ -216,6 +216,66 @@ DANGER_PLANTS = {
         "Strychnos toxifera",     # 9 – woorali, curare
         "Physostigma venenosum",  # 10 – haba del Calabar, fisostigmina letal
     ],
+    "new zealand": [
+        "Euphorbia lathyris",     # 1 – tártago, irritante cutáneo leve
+        "Solanum nigrum",         # 2 – hierba mora, bayas tóxicas
+        "Lantana camara",         # 3 – lantana (introducida), bayas tóxicas
+        "Nerium oleander",        # 4 – adelfa, glucósidos cardíacos
+        "Datura stramonium",      # 5 – estramonio, anticolinérgico potente
+        "Conium maculatum",       # 6 – cicuta, neurotóxica, muy abundante en NZ
+        "Corynocarpus laevigatus",# 7 – karaka, endémica, semillas con karakina
+        "Taxus baccata",          # 8 – tejo, taxina letal (jardines)
+        "Urtica ferox",           # 9 – ongaonga, ortiga arbórea endémica, picadura fatal
+        "Coriaria arborea",       # 10 – tutu, endémica, tutina causa convulsiones letales
+    ],
+    "papua new guinea": [
+        "Euphorbia tirucalli",    # 1 – árbol de lápiz, látex irritante
+        "Lantana camara",         # 2 – lantana, bayas tóxicas
+        "Mucuna pruriens",        # 3 – pica-pica, picazón intensa + L-DOPA
+        "Dieffenbachia seguine",  # 4 – dumb cane, cristales de oxalato
+        "Abrus precatorius",      # 5 – ojo de buey, abrina tan letal como ricina
+        "Gloriosa superba",       # 6 – gloriosa, colchicina altamente tóxica
+        "Thevetia peruviana",     # 7 – glucósidos cardíacos
+        "Cerbera manghas",        # 8 – cerbera, glucósidos cardíacos letales
+        "Strychnos nux-vomica",   # 9 – nuez vómica, estricnina
+        "Antiaris toxicaria",     # 10 – árbol upas, látex usado en flechas envenenadas
+    ],
+    "fiji": [
+        "Euphorbia hirta",        # 1 – euphorbia del asma, irritante leve
+        "Solanum nigrum",         # 2 – hierba mora, bayas tóxicas
+        "Lantana camara",         # 3 – lantana, hepatotóxica en ganado
+        "Jatropha curcas",        # 4 – piñón, semillas altamente tóxicas
+        "Dieffenbachia seguine",  # 5 – dumb cane, oxalatos en boca y garganta
+        "Abrus precatorius",      # 6 – ojo de buey, abrina extremadamente tóxica
+        "Thevetia peruviana",     # 7 – glucósidos cardíacos
+        "Barringtonia asiatica",  # 8 – vutu kana, semillas usadas como veneno de peces
+        "Cerbera manghas",        # 9 – vasa, glucósidos cardíacos, común en Pacífico
+        "Semecarpus vitiensis",   # 10 – endémica de Fiji, látex causa quemaduras graves
+    ],
+    "solomon islands": [
+        "Euphorbia hirta",        # 1 – irritante leve
+        "Lantana camara",         # 2 – bayas tóxicas para humanos y ganado
+        "Jatropha curcas",        # 3 – semillas con curcina, altamente tóxicas
+        "Mucuna pruriens",        # 4 – pica-pica, tricomas urticantes + L-DOPA
+        "Dieffenbachia seguine",  # 5 – oxalatos, irrita boca y garganta
+        "Abrus precatorius",      # 6 – abrina, una semilla puede ser letal
+        "Thevetia peruviana",     # 7 – glucósidos cardíacos
+        "Barringtonia asiatica",  # 8 – veneno de peces, saponinas tóxicas
+        "Cerbera manghas",        # 9 – glucósidos cardíacos letales
+        "Antiaris toxicaria",     # 10 – látex del árbol upas, usado en flechas
+    ],
+    "vanuatu": [
+        "Euphorbia hirta",        # 1 – irritante leve
+        "Lantana camara",         # 2 – bayas tóxicas
+        "Jatropha curcas",        # 3 – piñón, semillas muy tóxicas
+        "Dieffenbachia seguine",  # 4 – oxalatos, irrita mucosas
+        "Gloriosa superba",       # 5 – gloriosa, colchicina altamente tóxica
+        "Abrus precatorius",      # 6 – abrina, extremadamente tóxica
+        "Thevetia peruviana",     # 7 – glucósidos cardíacos
+        "Barringtonia asiatica",  # 8 – veneno tradicional de peces
+        "Cerbera manghas",        # 9 – glucósidos cardíacos, común en Vanuatu
+        "Excoecaria agallocha",   # 10 – mangle ciego, látex causa ceguera y ampollas
+    ],
 }
 
 # Plantas de ejemplo por país
