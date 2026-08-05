@@ -84,6 +84,18 @@ DANGER_PLANTS = {
         "Dendrocnide moroides",   # 9 – gympie-gympie, dolor extremo por meses
         "Cerbera manghas",        # 10
     ],
+    "brazil": [
+        "Euphorbia tirucalli",    # 1 – irritante cutáneo leve
+        "Dieffenbachia seguine",  # 2 – cristales de oxalato
+        "Jatropha curcas",        # 3 – semillas muy tóxicas
+        "Solanum americanum",     # 4 – tóxico si se ingiere
+        "Nerium oleander",        # 5 – glucósidos cardíacos
+        "Datura stramonium",      # 6 – anticolinérgico potente
+        "Brugmansia suaveolens",  # 7 – muy tóxico
+        "Ricinus communis",       # 8 – ricina
+        "Conium maculatum",       # 9 – cicuta, parálisis
+        "Hippomane mancinella",   # 10 – árbol más peligroso del mundo
+    ],
 }
 
 # Plantas de ejemplo por país
