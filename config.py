@@ -85,16 +85,16 @@ DANGER_PLANTS = {
         "Cerbera manghas",        # 10
     ],
     "brazil": [
-        "Euphorbia tirucalli",    # 1 – irritante cutáneo leve
-        "Dieffenbachia seguine",  # 2 – cristales de oxalato
-        "Jatropha curcas",        # 3 – semillas muy tóxicas
-        "Solanum americanum",     # 4 – tóxico si se ingiere
-        "Nerium oleander",        # 5 – glucósidos cardíacos
-        "Datura stramonium",      # 6 – anticolinérgico potente
-        "Brugmansia suaveolens",  # 7 – muy tóxico
-        "Ricinus communis",       # 8 – ricina
-        "Conium maculatum",       # 9 – cicuta, parálisis
-        "Hippomane mancinella",   # 10 – árbol más peligroso del mundo
+        "Caladium bicolor",       # 1 – coração-de-jesus, cristales de oxalato
+        "Solanum paniculatum",    # 2 – jurubeba, nightshade nativa de Brasil
+        "Jatropha mollissima",    # 3 – faveleiro, endémica de la caatinga
+        "Dieffenbachia seguine",  # 4 – comigo-ninguém-pode, muy tóxica en boca
+        "Thevetia peruviana",     # 5 – chapéu-de-napoleão, glucósidos cardíacos
+        "Brugmansia suaveolens",  # 6 – saia-branca, anticolinérgico
+        "Gloriosa superba",       # 7 – gloriosa, colchicina altamente tóxica
+        "Strychnos toxifera",     # 8 – curare amazónico, usado en flechas envenenadas
+        "Cerbera manghas",        # 9 – glucósidos cardíacos letales
+        "Strychnos nux-vomica",   # 10 – noz-vômica, estricnina, extremadamente tóxica
     ],
 }
 
