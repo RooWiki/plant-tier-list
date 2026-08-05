@@ -49,16 +49,40 @@ DANGER_TIMESTAMPS = [0, 3, 6, 11, 14, 19, 21, 24, 32, 43]
 # Plantas peligrosas por país, ordenadas de MENOS a MÁS peligrosa (1→10)
 DANGER_PLANTS = {
     "mexico": [
-        "Euphorbia milii",        # 1 – irritante cutáneo leve
-        "Solanum americanum",     # 2 – tóxico si se ingiere en cantidad
-        "Dieffenbachia seguine",  # 3 – cristales de oxalato, irrita boca/garganta
-        "Nerium oleander",        # 4 – glucósidos cardíacos
-        "Datura stramonium",      # 5 – anticolinérgico potente, alucinógeno
-        "Brugmansia suaveolens",  # 6 – muy tóxico, anticolinérgico fuerte
-        "Taxus globosa",          # 7 – taxina, altamente tóxico
-        "Ricinus communis",       # 8 – ricina, mortal en dosis bajas
-        "Conium maculatum",       # 9 – cicuta, neurotóxica, parálisis
-        "Hippomane mancinella",   # 10 – el árbol más peligroso del mundo
+        "Euphorbia antisyphilitica",     # 1 – candelilla, látex irritante leve (endémica desierto chihuahuense)
+        "Argemone mexicana",             # 2 – chicalote, alcaloides isoquinolínicos hepatotóxicos (nativa México)
+        "Crotalaria retusa",             # 3 – chipilillo, pirrolizidinas, adultera maíz y causa daño hepático (nativa)
+        "Karwinskia humboldtiana",       # 4 – tullidora, frutos negros causan polineuropatía letal (endémica México)
+        "Datura inoxia",                 # 5 – toloache, anticolinérgico potente, rituales prehispánicos (nativa México)
+        "Jatropha dioica",               # 6 – sangre de drago, curcina en semillas y látex (nativa México/SW USA)
+        "Taxus globosa",                 # 7 – tejo mexicano, taxina causa paro cardíaco (endémica México/C. América)
+        "Ricinus communis",              # 8 – higuerilla, ricina, una semilla puede matar (naturalizada, abundante México)
+        "Conium maculatum",              # 9 – cicuta (naturalizada, muy común en México), parálisis ascendente
+        "Hippomane mancinella",          # 10 – manzanillo de muerte, el árbol más peligroso del mundo (costas México)
+    ],
+    "usa": [
+        "Phytolacca americana",          # 1 – pokeweed, bayas tóxicas icónicas de Norteamérica (nativa USA)
+        "Actaea pachypoda",              # 2 – white baneberry/doll's eyes, frutos blancos cardiogénicos (nativa E. USA)
+        "Podophyllum peltatum",          # 3 – mayapple, podofilo-toxina potente (nativa E. USA)
+        "Kalmia latifolia",              # 4 – mountain laurel, grayanotoxinas bloquean canales de sodio (nativa E. USA)
+        "Ageratina altissima",           # 5 – white snakeroot, tremetona, causó "milk sickness" en pioneros (nativa)
+        "Zigadenus venenosus",           # 6 – death camas, alcaloides esteroidales, mata ganado y humanos (nativa)
+        "Sophora secundiflora",          # 7 – mescal bean, cytisina nicotínica, intoxicaciones rituales (nativa SW USA)
+        "Aconitum uncinatum",            # 8 – eastern monkshood, aconitina, paro cardíaco en mg (nativa Apalaches)
+        "Gelsemium sempervirens",        # 9 – carolina jessamine, géisemina, todas las partes letales (nativa SE USA)
+        "Cicuta maculata",               # 10 – water hemlock, cicutoxina, la más violentamente tóxica de Norteamérica (nativa)
+    ],
+    "canada": [
+        "Caltha palustris",              # 1 – marsh marigold, ranunculina en partes frescas (nativa)
+        "Sanguinaria canadensis",        # 2 – bloodroot, sanguinarina alcaloide, raíz rojo sangre (nativa Canadá)
+        "Sambucus racemosa",             # 3 – red elderberry, glucósidos cianogénicos en bayas crudas (nativa)
+        "Actaea rubra",                  # 4 – red baneberry, frutos rojos cardiogénicos (nativa Canadá)
+        "Taxus canadensis",              # 5 – tejo canadiense, taxina letal en hojas y semillas (endémica Canadá/NE USA)
+        "Veratrum viride",               # 6 – false hellebore nativo Canadá/NW USA, jervina teratogénica
+        "Loiseleuria procumbens",        # 7 – trailing azalea ártica nativa, grayanotoxinas cardiotóxicas
+        "Aconitum delphinifolium",       # 8 – alpine monkshood ártico, aconitina, flores hermosas mortales (nativa norte Canadá)
+        "Daphne mezereum",               # 9 – mezereum (naturalizada, bosques Canadá), dafnetoxina mata con pocas bayas
+        "Cicuta douglasii",              # 10 – western water hemlock, cicutoxina, la más violentamente tóxica del oeste canadiense
     ],
     "colombia": [
         "Euphorbia tirucalli",    # 1
