@@ -73,16 +73,16 @@ DANGER_PLANTS = {
         "Hippomane mancinella",   # 10
     ],
     "australia": [
-        "Euphorbia peplus",       # 1
-        "Solanum laciniatum",     # 2
-        "Lantana camara",         # 3
-        "Nerium oleander",        # 4
-        "Atropa belladonna",      # 5
-        "Abrus precatorius",      # 6
-        "Ricinus communis",       # 7
-        "Conium maculatum",       # 8
-        "Dendrocnide moroides",   # 9 – gympie-gympie, dolor extremo por meses
-        "Cerbera manghas",        # 10
+        "Solanum esuriale",              # 1 – quena, nightshade árida nativa (endémica)
+        "Pimelea trichostachya",         # 2 – lino del monte, ésteres diterpénicos, "mal de San Jorge" (endémica)
+        "Macrozamia communis",           # 3 – burrawang, cycada nativa, cycasina cancerígena y neurotóxica (endémica)
+        "Duboisia hopwoodii",            # 4 – pituri, tabaco sagrado aborigen, 10× más nicotina (endémica)
+        "Cerbera manghas",               # 5 – suicide apple, glucósidos cardíacos (costas tropicales QLD)
+        "Erythrophleum chlorostachys",   # 6 – Cooktown ironwood, eritrofleína causa paro cardíaco (endémica)
+        "Gastrolobium bilobum",          # 7 – heart-leaf poison bush, fluoroacetato natural (endémica WA)
+        "Acacia georginae",              # 8 – georgina gidgee, fluoroacetato (endémica Australia central)
+        "Gastrolobium grandiflorum",     # 9 – poison bush del norte, fluoroacetato en toda la planta (endémica NT/QLD)
+        "Dendrocnide moroides",          # 10 – gympie-gympie, tricomas silíceos, dolor extremo por meses (endémica NE QLD)
     ],
     "brazil": [
         "Caladium bicolor",       # 1 – coração-de-jesus, cristales de oxalato
@@ -217,64 +217,64 @@ DANGER_PLANTS = {
         "Physostigma venenosum",  # 10 – haba del Calabar, fisostigmina letal
     ],
     "new zealand": [
-        "Euphorbia lathyris",     # 1 – tártago, irritante cutáneo leve
-        "Solanum nigrum",         # 2 – hierba mora, bayas tóxicas
-        "Lantana camara",         # 3 – lantana (introducida), bayas tóxicas
-        "Nerium oleander",        # 4 – adelfa, glucósidos cardíacos
-        "Datura stramonium",      # 5 – estramonio, anticolinérgico potente
-        "Conium maculatum",       # 6 – cicuta, neurotóxica, muy abundante en NZ
-        "Corynocarpus laevigatus",# 7 – karaka, endémica, semillas con karakina
-        "Taxus baccata",          # 8 – tejo, taxina letal (jardines)
-        "Urtica ferox",           # 9 – ongaonga, ortiga arbórea endémica, picadura fatal
-        "Coriaria arborea",       # 10 – tutu, endémica, tutina causa convulsiones letales
+        "Euphorbia glauca",              # 1 – shore spurge endémica NZ, látex irritante en costas
+        "Ranunculus insignis",           # 2 – buttercup alpino nativo NZ, protoanemonina vesicante (endémica)
+        "Clematis paniculata",           # 3 – puawhananga nativa NZ, ranunculina en partes frescas (endémica)
+        "Pimelea prostrata",             # 4 – strathmore weed nativa NZ/Australia, diterpenoides hepatotóxicos
+        "Solanum laciniatum",            # 5 – poroporo, nightshade nativa de NZ y SE Australia
+        "Corynocarpus laevigatus",       # 6 – karaka, endémica NZ, karakina en semilla neurotóxica
+        "Taxus baccata",                 # 7 – tejo (en jardines NZ), taxina, paro cardíaco con 50 g de hoja
+        "Conium maculatum",              # 8 – cicuta (naturalizada, ubicua en NZ), parálisis ascendente
+        "Urtica ferox",                  # 9 – ongaonga, ortiga arbórea endémica NZ, picadura ha matado personas y caballos
+        "Coriaria arborea",              # 10 – tutu, endémica NZ, tutina bloquea receptores GABA, convulsiones letales
     ],
     "papua new guinea": [
-        "Euphorbia tirucalli",    # 1 – árbol de lápiz, látex irritante
-        "Lantana camara",         # 2 – lantana, bayas tóxicas
-        "Mucuna pruriens",        # 3 – pica-pica, picazón intensa + L-DOPA
-        "Dieffenbachia seguine",  # 4 – dumb cane, cristales de oxalato
-        "Abrus precatorius",      # 5 – ojo de buey, abrina tan letal como ricina
-        "Gloriosa superba",       # 6 – gloriosa, colchicina altamente tóxica
-        "Thevetia peruviana",     # 7 – glucósidos cardíacos
-        "Cerbera manghas",        # 8 – cerbera, glucósidos cardíacos letales
-        "Strychnos nux-vomica",   # 9 – nuez vómica, estricnina
-        "Antiaris toxicaria",     # 10 – árbol upas, látex usado en flechas envenenadas
+        "Solanum torvum",                # 1 – turkey berry silvestre, alcaloides esteroidales (silvestre Melanesia)
+        "Calophyllum inophyllum",        # 2 – tamanu, xantonas tóxicas en frutos inmaduros (costas PNG/Fiji)
+        "Brucea javanica",               # 3 – kosam, bruceolides citotóxicos (SE Asia/Melanesia)
+        "Croton tiglium",                # 4 – purging croton, ésteres de forbol extremadamente irritantes (Melanesia)
+        "Abrus precatorius",             # 5 – ojo de buey, abrina igual de letal que ricina (Melanesia tropical)
+        "Derris elliptica",              # 6 – tuba root, rotenona, veneno de pesca tradicional melanesio
+        "Pangium edule",                 # 7 – kepayang, ácido prúsico (HCN) en frutos crudos (endémico Melanesia)
+        "Dichapetalum gelonioides",      # 8 – fluoroacetato sódico natural, endémica Melanesia/SE Asia
+        "Antiaris toxicaria",            # 9 – árbol upas, antiarina cardiotóxica en látex, flechas envenenadas
+        "Cerbera manghas",               # 10 – cerbera, glucósidos cardíacos letales (costas PNG)
     ],
     "fiji": [
-        "Euphorbia hirta",        # 1 – euphorbia del asma, irritante leve
-        "Solanum nigrum",         # 2 – hierba mora, bayas tóxicas
-        "Lantana camara",         # 3 – lantana, hepatotóxica en ganado
-        "Jatropha curcas",        # 4 – piñón, semillas altamente tóxicas
-        "Dieffenbachia seguine",  # 5 – dumb cane, oxalatos en boca y garganta
-        "Abrus precatorius",      # 6 – ojo de buey, abrina extremadamente tóxica
-        "Thevetia peruviana",     # 7 – glucósidos cardíacos
-        "Barringtonia asiatica",  # 8 – vutu kana, semillas usadas como veneno de peces
-        "Cerbera manghas",        # 9 – vasa, glucósidos cardíacos, común en Pacífico
-        "Semecarpus vitiensis",   # 10 – endémica de Fiji, látex causa quemaduras graves
+        "Derris trifoliata",             # 1 – tuba marino nativo, rotenona, veneno de pesca (costas Pacífico)
+        "Gnetum gnemon",                 # 2 – bago, semillas y hojas con glucósidos tóxicos en crudo (Pacífico occidental)
+        "Mucuna gigantea",               # 3 – sea bean, tricomas urticantes y L-DOPA en semillas (costas Pacífico)
+        "Inocarpus fagifer",             # 4 – ivi, castaño de Tahití, glucósidos cianogénicos en crudo (Pacífico)
+        "Colubrina asiatica",            # 5 – lather leaf, saponinas hemolíticas (costas Pacífico Fiji/Vanuatu)
+        "Barringtonia asiatica",         # 6 – vutu kana, saponinas, veneno de pesca sagrado en Fiji (Fiji/Vanuatu)
+        "Excoecaria agallocha",          # 7 – mangle ciego, látex causa ceguera y quemaduras (Fiji/Vanuatu)
+        "Calophyllum inophyllum",        # 8 – tamanu, xantonas y látex tóxicos en frutos inmaduros (PNG/Fiji)
+        "Cycas seemannii",               # 9 – cycada endémica Pacífico Sur, cycasina neurotóxica y cancerígena (Fiji/Vanuatu)
+        "Semecarpus vitiensis",          # 10 – marking nut endémica FIJI, análogo de urushiol, quemaduras químicas severas
     ],
     "solomon islands": [
-        "Euphorbia hirta",        # 1 – irritante leve
-        "Lantana camara",         # 2 – bayas tóxicas para humanos y ganado
-        "Jatropha curcas",        # 3 – semillas con curcina, altamente tóxicas
-        "Mucuna pruriens",        # 4 – pica-pica, tricomas urticantes + L-DOPA
-        "Dieffenbachia seguine",  # 5 – oxalatos, irrita boca y garganta
-        "Abrus precatorius",      # 6 – abrina, una semilla puede ser letal
-        "Thevetia peruviana",     # 7 – glucósidos cardíacos
-        "Barringtonia asiatica",  # 8 – veneno de peces, saponinas tóxicas
-        "Cerbera manghas",        # 9 – glucósidos cardíacos letales
-        "Antiaris toxicaria",     # 10 – látex del árbol upas, usado en flechas
+        "Piper methysticum",             # 1 – kava, hepatotóxico en abuso prolongado (Salomón/Vanuatu)
+        "Erythrina variegata",           # 2 – árbol del coral, eritralina alcaloide en semillas (Salomón/Vanuatu)
+        "Barringtonia racemosa",         # 3 – barringtonia de río, saponinas, veneno de pesca tradicional
+        "Brucea javanica",               # 4 – kosam, bruceolides citotóxicos (Melanesia, PNG/Salomón)
+        "Croton tiglium",                # 5 – purging croton, ésteres de forbol (Melanesia, PNG/Salomón)
+        "Derris elliptica",              # 6 – tuba, rotenona, veneno de pesca (Melanesia, PNG/Salomón)
+        "Inocarpus fagifer",             # 7 – ivi, glucósidos cianogénicos en semillas crudas (Fiji/Salomón)
+        "Pangium edule",                 # 8 – kepayang, HCN letal en frutos crudos (Melanesia, PNG/Salomón)
+        "Dendrocnide latifolia",         # 9 – stinging tree melanesio, tricomas urticantes (Salomón/Vanuatu)
+        "Dichapetalum gelonioides",      # 10 – fluoroacetato sódico natural, endémica Melanesia (PNG/Salomón)
     ],
     "vanuatu": [
-        "Euphorbia hirta",        # 1 – irritante leve
-        "Lantana camara",         # 2 – bayas tóxicas
-        "Jatropha curcas",        # 3 – piñón, semillas muy tóxicas
-        "Dieffenbachia seguine",  # 4 – oxalatos, irrita mucosas
-        "Gloriosa superba",       # 5 – gloriosa, colchicina altamente tóxica
-        "Abrus precatorius",      # 6 – abrina, extremadamente tóxica
-        "Thevetia peruviana",     # 7 – glucósidos cardíacos
-        "Barringtonia asiatica",  # 8 – veneno tradicional de peces
-        "Cerbera manghas",        # 9 – glucósidos cardíacos, común en Vanuatu
-        "Excoecaria agallocha",   # 10 – mangle ciego, látex causa ceguera y ampollas
+        "Tephrosia purpurea",            # 1 – veneno de pesca tradicional, rotenona (Vanuatu/Pacífico)
+        "Piper methysticum",             # 2 – kava, mayor consumidor mundial, hepatotóxico crónico (Salomón/Vanuatu)
+        "Gyrocarpus americanus",         # 3 – árbol helicóptero, alcaloides tóxicos en frutos (Pacífico)
+        "Erythrina variegata",           # 4 – árbol del coral, eritralina en semillas (Salomón/Vanuatu)
+        "Mucuna gigantea",               # 5 – sea bean, tricomas urticantes y L-DOPA (Fiji/Vanuatu)
+        "Colubrina asiatica",            # 6 – lather leaf, saponinas hemolíticas (Fiji/Vanuatu)
+        "Barringtonia asiatica",         # 7 – vutu, saponinas, veneno de pesca sagrado (Fiji/Vanuatu)
+        "Excoecaria agallocha",          # 8 – mangle ciego, látex causa ceguera temporal (Fiji/Vanuatu)
+        "Cycas seemannii",               # 9 – cycada endémica Pacífico Sur, cycasina cancerígena y neurotóxica (Fiji/Vanuatu)
+        "Dendrocnide latifolia",         # 10 – stinging tree melanesio, pariente del gympie-gympie (Salomón/Vanuatu)
     ],
 }
 
