@@ -8,7 +8,7 @@ from moviepy import (
     vfx,
 )
 
-from config import DANGER_TIMESTAMPS, FPS
+from config import DANGER_TIMESTAMPS, FPS, INTRO_MUSIC_PATH
 from src.danger_graphics import render_danger_card, render_intro_card
 
 INTRO_DURATION = 4.0
@@ -72,16 +72,17 @@ def create_danger_video(
 
     video = concatenate_videoclips(clips)
 
-    # ── Audio: TTS during intro, music after intro ────────────────────────────
+    # ── Audio: intro music + TTS during intro, mr-incredible after ───────────
     print("  Generando voz TTS...")
-    tts_path  = _generate_tts(f"Most dangerous plants of {country}")
-    tts_audio = AudioFileClip(str(tts_path))
+    tts_path    = _generate_tts(f"Most dangerous plants of {country}")
+    tts_audio   = AudioFileClip(str(tts_path))
+    intro_music = AudioFileClip(str(INTRO_MUSIC_PATH)).subclipped(0, INTRO_DURATION)
 
     silence       = audio.subclipped(0, INTRO_DURATION).with_volume_scaled(0)
     music_portion = audio.subclipped(0, min(video.duration - INTRO_DURATION, music_dur))
     delayed_music = concatenate_audioclips([silence, music_portion])
 
-    final_audio = CompositeAudioClip([delayed_music, tts_audio])
+    final_audio = CompositeAudioClip([delayed_music, intro_music, tts_audio])
     final_audio = final_audio.with_duration(video.duration)
     video = video.with_audio(final_audio)
 

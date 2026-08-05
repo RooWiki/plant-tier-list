@@ -38,9 +38,10 @@ FPS = 24
 FONT        = "/usr/share/fonts/inter/InterVariable.ttf"
 FONT_BOLD   = "/usr/share/fonts/inter/InterVariable.ttf"
 
-MEMES_DIR   = BASE_DIR / "memes" / "mr increible"
-MUSIC_PATH  = BASE_DIR / "music" / "mr-incredible-becomes-uncanny-all-songs-music.mp3"
-BG_DIR      = IMAGES_DIR / "backgrounds"
+MEMES_DIR         = BASE_DIR / "memes" / "mr increible"
+MUSIC_PATH        = BASE_DIR / "music" / "mr-incredible-becomes-uncanny-all-songs-music.mp3"
+INTRO_MUSIC_PATH  = BASE_DIR / "music" / "intro.m4a"
+BG_DIR            = IMAGES_DIR / "backgrounds"
 
 # Tiempos (segundos) en que la música cambia de fase — un timestamp por planta
 DANGER_TIMESTAMPS = [0, 3, 6, 11, 14, 19, 21, 24, 32, 43]
