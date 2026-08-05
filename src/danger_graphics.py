@@ -67,13 +67,20 @@ def render_danger_card(
 
     draw_top = ImageDraw.Draw(top)
 
-    # Plant name — UPPERCASE, white with black stroke
+    # White strip behind plant name
+    draw_top.rectangle([0, 0, VIDEO_WIDTH, NAME_H], fill=(255, 255, 255))
+
+    # Plant name — UPPERCASE, white with black stroke, on top of white strip
     name = plant_name.upper()
     font = _font(82, bold=True)
     bbox = draw_top.textbbox((0, 0), name, font=font)
     if bbox[2] - bbox[0] > VIDEO_WIDTH - 60:
         font = _font(58, bold=True)
-    _text_with_stroke(draw_top, (VIDEO_WIDTH // 2, NAME_H // 2), name, font)
+    # On white strip use dark text (no stroke needed)
+    draw_top.text(
+        (VIDEO_WIDTH // 2, NAME_H // 2),
+        name, font=font, fill=(20, 20, 20), anchor="mm"
+    )
 
     # Plant image — sharp corners, centered in remaining space
     remaining = TOP_H - NAME_H
@@ -113,5 +120,54 @@ def render_danger_card(
             pass
 
     canvas.paste(bot, (0, TOP_H))
+
+    return np.array(canvas)
+
+
+def render_intro_card(country: str, bg_img_path: Path | None = None) -> np.ndarray:
+    canvas = Image.new("RGB", (VIDEO_WIDTH, VIDEO_HEIGHT), (15, 15, 15))
+
+    # Flag as full background
+    if bg_img_path and Path(bg_img_path).exists():
+        try:
+            flag = Image.open(bg_img_path).convert("RGB")
+            canvas = _fill_crop(flag, VIDEO_WIDTH, VIDEO_HEIGHT)
+        except Exception:
+            pass
+
+    # Dark overlay for readability
+    overlay = Image.new("RGBA", (VIDEO_WIDTH, VIDEO_HEIGHT), (0, 0, 0, 160))
+    canvas = canvas.convert("RGBA")
+    canvas = Image.alpha_composite(canvas, overlay).convert("RGB")
+
+    draw = ImageDraw.Draw(canvas)
+
+    cx = VIDEO_WIDTH // 2
+    cy = VIDEO_HEIGHT // 2
+
+    line1 = "MOST DANGEROUS"
+    line2 = "PLANTS OF"
+    line3 = country.upper()
+
+    font_main = _font(110, bold=True)
+    font_country = _font(130, bold=True)
+
+    line_gap = 30
+    bbox1 = draw.textbbox((0, 0), line1, font=font_main)
+    bbox2 = draw.textbbox((0, 0), line2, font=font_main)
+    bbox3 = draw.textbbox((0, 0), line3, font=font_country)
+
+    h1 = bbox1[3] - bbox1[1]
+    h2 = bbox2[3] - bbox2[1]
+    h3 = bbox3[3] - bbox3[1]
+    total_h = h1 + h2 + h3 + line_gap * 2
+
+    y1 = cy - total_h // 2 + h1 // 2
+    y2 = y1 + h1 + line_gap + h2 // 2
+    y3 = y2 + h2 + line_gap + h3 // 2
+
+    _text_with_stroke(draw, (cx, y1), line1, font_main, stroke=6)
+    _text_with_stroke(draw, (cx, y2), line2, font_main, stroke=6)
+    _text_with_stroke(draw, (cx, y3), line3, font_country, stroke=8)
 
     return np.array(canvas)

@@ -3,7 +3,9 @@ from pathlib import Path
 from moviepy import AudioFileClip, ImageClip, concatenate_videoclips
 
 from config import DANGER_TIMESTAMPS, FPS
-from src.danger_graphics import render_danger_card
+from src.danger_graphics import render_danger_card, render_intro_card
+
+INTRO_DURATION = 3.0  # seconds the intro card is shown before the plants
 
 
 def create_danger_video(
@@ -23,7 +25,10 @@ def create_danger_video(
     timestamps = DANGER_TIMESTAMPS + [music_dur]
     durations = [timestamps[i + 1] - timestamps[i] for i in range(10)]
 
-    clips = []
+    # Intro card — plays with the first INTRO_DURATION seconds of music
+    intro_frame = render_intro_card(country, bg_img_path)
+    clips = [ImageClip(intro_frame, duration=INTRO_DURATION)]
+
     for i, plant in enumerate(plants):
         frame = render_danger_card(
             plant_name=plant["name"],
