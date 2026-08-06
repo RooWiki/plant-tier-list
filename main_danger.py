@@ -32,6 +32,33 @@ COUNTRY_CODES = {
     "guyana": "gy", "suriname": "sr", "french guiana": "gf",
     "new zealand": "nz", "papua new guinea": "pg", "fiji": "fj",
     "solomon islands": "sb", "vanuatu": "vu",
+    "turkey": "tr", "iran": "ir", "iraq": "iq", "saudi arabia": "sa",
+    "yemen": "ye", "oman": "om", "uae": "ae", "qatar": "qa",
+    "kuwait": "kw", "jordan": "jo", "lebanon": "lb", "syria": "sy",
+    "israel": "il",
+    # Central America / Caribbean
+    "belize": "bz", "haiti": "ht", "jamaica": "jm", "trinidad and tobago": "tt",
+    # Europe
+    "italy": "it", "portugal": "pt", "united kingdom": "gb", "russia": "ru",
+    "ukraine": "ua", "poland": "pl", "netherlands": "nl", "belgium": "be",
+    "sweden": "se", "norway": "no", "finland": "fi", "denmark": "dk",
+    "switzerland": "ch", "austria": "at", "greece": "gr", "romania": "ro",
+    "hungary": "hu", "czech republic": "cz", "slovakia": "sk", "croatia": "hr",
+    "serbia": "rs", "bulgaria": "bg", "albania": "al",
+    # Africa
+    "nigeria": "ng", "ethiopia": "et", "egypt": "eg", "south africa": "za",
+    "kenya": "ke", "tanzania": "tz", "ghana": "gh", "cameroon": "cm",
+    "mozambique": "mz", "madagascar": "mg", "angola": "ao", "zambia": "zm",
+    "zimbabwe": "zw", "senegal": "sn", "mali": "ml", "niger": "ne",
+    "chad": "td", "sudan": "sd", "somalia": "so", "drc": "cd", "congo": "cg",
+    "ivory coast": "ci", "morocco": "ma", "algeria": "dz", "tunisia": "tn",
+    "libya": "ly",
+    # Asia
+    "south korea": "kr", "north korea": "kp", "vietnam": "vn", "thailand": "th",
+    "indonesia": "id", "philippines": "ph", "malaysia": "my", "myanmar": "mm",
+    "cambodia": "kh", "laos": "la", "bangladesh": "bd", "pakistan": "pk",
+    "afghanistan": "af", "nepal": "np", "sri lanka": "lk", "singapore": "sg",
+    "mongolia": "mn", "kazakhstan": "kz", "uzbekistan": "uz", "taiwan": "tw",
 }
 
 # Maps each country to its continent output subfolder
